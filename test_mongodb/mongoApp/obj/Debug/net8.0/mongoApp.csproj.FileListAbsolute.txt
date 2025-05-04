@@ -1,0 +1,10 @@
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.csproj.AssemblyReference.cache
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.AssemblyInfoInputs.cache
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.AssemblyInfo.cs
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.csproj.CoreCompileInputs.cache
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.MvcApplicationPartsAssemblyInfo.cs
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.MvcApplicationPartsAssemblyInfo.cache
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.sourcelink.json
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.RazorAssemblyInfo.cache
+/Users/slamdunk/Documents/24-2 토마스바타/Advanced Database/test_mongodb/mongoApp/obj/Debug/net8.0/mongoApp.RazorAssemblyInfo.cs

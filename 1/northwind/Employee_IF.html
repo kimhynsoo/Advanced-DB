@@ -1,0 +1,68 @@
+<!-- Hyeonsu KIM A24586 -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Minimal HTML5 Document Showing How to use RestDB API and jQuery">
+	<title>RestDB jQuery example</title>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+	<h1>Information Of Employee</h1>
+	<div id="content">
+	</div>
+	<script>
+		$(document).ready(function() {
+			/*
+				Inject the API key for every call to the database.
+			*/
+			$.ajaxPrefilter(function( options ) {
+				if ( !options.beforeSend) {
+					options.beforeSend = function (xhr) {
+						xhr.setRequestHeader('x-apikey', '670564283f82e1d6c44c5fb8');
+					}
+				}
+			});
+			/*
+				Create html from one record
+			*/
+			var makeHtmlItem = function(item) {
+				var element = $('<div></div>').attr('id', item._id);
+				element.append('<hr><span>'+item['Employee_ID']+' '+item['FirstName']+' '+item['LastName']+'<br>Department : '+item['Department_ID'][0]['Department_ID']+' '+item['Department_ID'][0]['Department_Name']+'</span>');
+				
+				return element;
+			}
+
+			/*
+				PUT a comment to a record and replace html element with updated record
+			*/
+			var itemClicked = function(evt){
+				console.log(this.id);
+				var comment = $(this).prev().val();
+				var jsondata = {"comment": comment};
+				$.ajax({
+					type: "PUT",
+					url: 'https://northwind-b4cc.restdb.io/rest/employees/'+this.id,
+					contentType: "application/json",
+					data: JSON.stringify(jsondata)
+				}).done(function(result) {
+					// replace div with a fresh record
+				  	$("#"+result._id).empty().append(makeHtmlItem(result));
+				});
+			}
+
+			/*
+				GET 5 records from contact Collection.
+				Sort by _id in reverse order, i.e. newest first
+			*/
+			$.getJSON('https://northwind-b4cc.restdb.io/rest/employees?sort=_id&dir=1', function(data){
+				$.each(data, function(key, item){
+					console.log(item);
+					$('#content').append(makeHtmlItem(item));
+				});
+			});
+		});
+	</script>
+
+	</body>
+</html>
