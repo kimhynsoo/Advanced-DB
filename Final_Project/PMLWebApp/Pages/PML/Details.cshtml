@@ -1,0 +1,56 @@
+@page "{id}"
+@model PMLWebApp.Pages.PML.DetailsModel
+@{
+    ViewData["Title"] = "Player Details";
+}
+
+<h1>Player Details</h1>
+
+@if (Model.Player != null)
+{
+    <div>
+        <h2>@Model.Player.Name</h2>
+        <p><strong>Player ID:</strong> @Model.Player.Player_ID</p>
+        <p><strong>Age:</strong> @Model.Player.Age</p>
+        <p><strong>Rating:</strong> @Model.Player.Rating</p>
+        <p><strong>Team Name:</strong> @Model.Player.Team_Name</p>
+        <p><strong>Team ID:</strong> @Model.Player.Team_ID</p>
+    </div>
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button type="button" onclick="window.location.href='@Url.Page("/PML/Edit", new { id = Model.Player.Player_ID })'">Edit</button>
+
+        <form method="post" asp-page-handler="Delete" asp-route-id="@Model.Player.Player_ID" onsubmit="return confirm('Are you sure you want to delete this player?');">
+            <button type="submit">Delete</button>
+        </form>
+
+        <button type="button" onclick="showNewAlert()">New</button>
+    </div>
+
+    <h3>Team Details</h3>
+    @if (Model.Team != null)
+    {
+        <div>
+            <p><strong>Team ID:</strong> @Model.Team.Team_ID</p>
+            <p><strong>Team Name:</strong> @Model.Team.Team_Name</p>
+            <p><strong>Short Name:</strong> @Model.Team.Short_Name</p>
+            <p><strong>Founded Year:</strong> @Model.Team.Founded_Year</p>
+            <p><strong>Stadium:</strong> @Model.Team.Stadium</p>
+        </div>
+    }
+    else
+    {
+        <p>Team not found.</p>
+    }
+}
+else
+{
+    <p>Player not found.</p>
+}
+
+@section Scripts {
+    <script>
+        function showNewAlert() {
+            alert("Please go to the home page and click the 'New' button to create a new player.");
+        }
+    </script>
+}

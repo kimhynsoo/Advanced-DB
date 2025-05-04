@@ -1,0 +1,44 @@
+@page
+@model PMLWebApp.Pages.PML.NewDetailModel
+@{
+    ViewData["Title"] = "New Player Detail";
+}
+
+<h1>New Player Detail</h1>
+
+
+<div>
+    <label>Player ID:</label> <span>N/A</span>
+</div>
+<div>
+    <label>Name:</label> <span>N/A</span>
+</div>
+<div>
+    <label>Age:</label> <span>N/A</span>
+</div>
+<div>
+    <label>Rating:</label> <span>N/A</span>
+</div>
+<div>
+    <label>Team Name:</label> <span>N/A</span>
+</div>
+<div>
+    <label>Team ID:</label> <span>N/A</span>
+</div>
+
+
+<div>
+    <button onclick="showEditAlert()">Edit</button>
+    <button onclick="showDeleteAlert()">Delete</button>
+    <a asp-page="./Create"><button type="button">New</button></a>
+</div>
+
+<script>
+    function showEditAlert() {
+        alert("You cannot edit as there is no data available.");
+    }
+
+    function showDeleteAlert() {
+        alert("You cannot delete as there is no data available.");
+    }
+</script>

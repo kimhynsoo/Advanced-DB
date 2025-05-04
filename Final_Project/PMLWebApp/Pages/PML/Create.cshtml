@@ -1,0 +1,42 @@
+@page
+@model PMLWebApp.Pages.PML.CreateModel
+@{
+    ViewData["Title"] = "Create Player";
+}
+
+<h1>Create Player</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Player.Player_ID"></label>
+        <input asp-for="Player.Player_ID" required />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Name"></label>
+        <input asp-for="Player.Name" required />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Age"></label>
+        <input asp-for="Player.Age" type="number" required />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Rating"></label>
+        <input asp-for="Player.Rating" type="number" required />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Team_Name"></label>
+        <input asp-for="Player.Team_Name" required />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Team_ID"></label>
+        <input asp-for="Player.Team_ID" required />
+    </div>
+    
+    <button type="submit">Create</button>
+    <button type="button" onclick="window.location.href='@Url.Page("./Index")'" class="cancel-button">Cancel</button>
+</form>

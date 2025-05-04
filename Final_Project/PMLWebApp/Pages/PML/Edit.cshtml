@@ -1,0 +1,44 @@
+@page "{id}"
+@model PMLWebApp.Pages.PML.EditModel
+@{
+    ViewData["Title"] = "Edit Player";
+}
+
+<h1>Edit Player</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Player.Id" />
+    
+    <div>
+        <label asp-for="Player.Player_ID"></label>
+        <input asp-for="Player.Player_ID" readonly />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Name"></label>
+        <input asp-for="Player.Name" />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Age"></label>
+        <input asp-for="Player.Age" type="number" />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Rating"></label>
+        <input asp-for="Player.Rating" type="number" />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Team_Name"></label>
+        <input asp-for="Player.Team_Name" />
+    </div>
+    
+    <div>
+        <label asp-for="Player.Team_ID"></label>
+        <input asp-for="Player.Team_ID" />
+    </div>
+    
+    <button type="submit">Save</button>
+    <button type="button" onclick="window.location.href='@Url.Page("./Index")'" class="cancel-button">Cancel</button>
+</form>

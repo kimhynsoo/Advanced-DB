@@ -1,0 +1,335 @@
+{\rtf1\ansi\ansicpg949\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red248\green251\blue247;
+\red247\green250\blue248;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c97786\c98571\c97564;
+\cssrgb\c97616\c98401\c97763;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 use PL_SOCCER\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \cb3 \CocoaLigature0 \
+switched to db PL_SOCCER
+\fs24 \cb3 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+// Create Teams collection\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 db.Teams.insertMany([\
+    \{\
+        Team_ID: "1",\
+        Team_Name: "Arsenal",\
+        Short_Name: "ARS",\
+        Founded_Year: 1886,\
+        Stadium: "Emirates Stadium"\
+    \},\
+    \{\
+        Team_ID: "2",\
+        Team_Name: "Chelsea",\
+        Short_Name: "CHE",\
+        Founded_Year: 1905,\
+        Stadium: "Stamford Bridge"\
+    \},\
+    \{\
+        Team_ID: "3",\
+        Team_Name: "Liverpool",\
+        Short_Name: "LIV",\
+        Founded_Year: 1892,\
+        Stadium: "Anfield"\
+    \},\
+    \{\
+        Team_ID: "4",\
+        Team_Name: "Manchester City",\
+        Short_Name: "MCI",\
+        Founded_Year: 1880,\
+        Stadium: "Etihad Stadium"\
+    \},\
+    \{\
+        Team_ID: "5",\
+        Team_Name: "Manchester United",\
+        Short_Name: "MUN",\
+        Founded_Year: 1878,\
+        Stadium: "Old Trafford"\
+    \},\
+    \{\
+        Team_ID: "6",\
+        Team_Name: "Tottenham Hotspur",\
+        Short_Name: "TOT",\
+        Founded_Year: 1882,\
+        Stadium: "Tottenham Hotspur Stadium"\
+    \}\
+]);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+// Create Players collection\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 db.Players.insertMany([\
+    \{\
+        Player_ID: "P1",\
+        Name: "Bukayo Saka",\
+        Age: 21,\
+        Rating: 85,\
+        Team_Name: "Arsenal",\
+        Team_ID: "1"\
+    \},\
+    \{\
+        Player_ID: "P2",\
+        Name: "Mason Mount",\
+        Age: 24,\
+        Rating: 84,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P3",\
+        Name: "Mohamed Salah",\
+        Age: 31,\
+        Rating: 90,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \},\
+    \{\
+        Player_ID: "P4",\
+        Name: "Kevin De Bruyne",\
+        Age: 32,\
+        Rating: 91,\
+        Team_Name: "Manchester City",\
+        Team_ID: "4"\
+    \},\
+    \{\
+        Player_ID: "P5",\
+        Name: "Bruno Fernandes",\
+        Age: 29,\
+        Rating: 88,\
+        Team_Name: "Manchester United",\
+        Team_ID: "5"\
+    \},\
+    \{\
+        Player_ID: "P6",\
+        Name: "Harry Kane",\
+        Age: 30,\
+        Rating: 89,\
+        Team_Name: "Tottenham Hotspur",\
+        Team_ID: "6"\
+    \},\
+    \{\
+        Player_ID: "P7",\
+        Name: "Son Heung-min",\
+        Age: 31,\
+        Rating: 87,\
+        Team_Name: "Tottenham Hotspur",\
+        Team_ID: "6"\
+    \},\
+    \{\
+        Player_ID: "P8",\
+        Name: "Raheem Sterling",\
+        Age: 28,\
+        Rating: 86,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P9",\
+        Name: "Virgil van Dijk",\
+        Age: 31,\
+        Rating: 88,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \},\
+    \{\
+        Player_ID: "P10",\
+        Name: "Ruben Dias",\
+        Age: 26,\
+        Rating: 87,\
+        Team_Name: "Manchester City",\
+        Team_ID: "4"\
+    \},\
+    \{\
+        Player_ID: "P11",\
+        Name: "N'Golo Kant\'e9",\
+        Age: 32,\
+        Rating: 87,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P12",\
+        Name: "Marcus Rashford",\
+        Age: 25,\
+        Rating: 85,\
+        Team_Name: "Manchester United",\
+        Team_ID: "5"\
+    \},\
+    \{\
+        Player_ID: "P13",\
+        Name: "Gabriel Jesus",\
+        Age: 26,\
+        Rating: 84,\
+        Team_Name: "Arsenal",\
+        Team_ID: "1"\
+    \},\
+    \{\
+        Player_ID: "P14",\
+        Name: "Alisson Becker",\
+        Age: 30,\
+        Rating: 89,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \},\
+    \{\
+        Player_ID: "P15",\
+        Name: "Ederson",\
+        Age: 29,\
+        Rating: 89,\
+        Team_Name: "Manchester City",\
+        Team_ID: "4"\
+    \},\
+    \{\
+        Player_ID: "P16",\
+        Name: "Jadon Sancho",\
+        Age: 23,\
+        Rating: 84,\
+        Team_Name: "Manchester United",\
+        Team_ID: "5"\
+    \},\
+    \{\
+        Player_ID: "P17",\
+        Name: "Pierre-Emerick Aubameyang",\
+        Age: 33,\
+        Rating: 85,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P18",\
+        Name: "Jordan Henderson",\
+        Age: 32,\
+        Rating: 83,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \},\
+    \{\
+        Player_ID: "P19",\
+        Name: "Timo Werner",\
+        Age: 26,\
+        Rating: 84,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P20",\
+        Name: "Phil Foden",\
+        Age: 23,\
+        Rating: 86,\
+        Team_Name: "Manchester City",\
+        Team_ID: "4"\
+    \}\
+]);\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+//Insert Players for search\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 db.Players.insertMany([\
+    \{\
+        Player_ID: "P21",\
+        Name: "Salah Mohammed",\
+        Age: 29,\
+        Rating: 89,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \},\
+    \{\
+        Player_ID: "P22",\
+        Name: "Salah Al-Din",\
+        Age: 27,\
+        Rating: 82,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P23",\
+        Name: "Salah Ibrahim",\
+        Age: 25,\
+        Rating: 80,\
+        Team_Name: "Arsenal",\
+        Team_ID: "1"\
+    \},\
+    \{\
+        Player_ID: "P24",\
+        Name: "Mohammed Salah",\
+        Age: 32,\
+        Rating: 90,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \},\
+    \{\
+        Player_ID: "P25",\
+        Name: "Mohammed Salah Jr.",\
+        Age: 22,\
+        Rating: 81,\
+        Team_Name: "Manchester City",\
+        Team_ID: "4"\
+    \},\
+    \{\
+        Player_ID: "P26",\
+        Name: "Salah Ahmed",\
+        Age: 26,\
+        Rating: 83,\
+        Team_Name: "Tottenham Hotspur",\
+        Team_ID: "6"\
+    \},\
+    \{\
+        Player_ID: "P27",\
+        Name: "Salah El-Masry",\
+        Age: 24,\
+        Rating: 79,\
+        Team_Name: "Arsenal",\
+        Team_ID: "1"\
+    \},\
+    \{\
+        Player_ID: "P28",\
+        Name: "Mohammed Saleh",\
+        Age: 28,\
+        Rating: 85,\
+        Team_Name: "Manchester United",\
+        Team_ID: "5"\
+    \},\
+    \{\
+        Player_ID: "P29",\
+        Name: "Saleh Mohammed",\
+        Age: 30,\
+        Rating: 86,\
+        Team_Name: "Chelsea",\
+        Team_ID: "2"\
+    \},\
+    \{\
+        Player_ID: "P30",\
+        Name: "Salim Salah",\
+        Age: 23,\
+        Rating: 84,\
+        Team_Name: "Liverpool",\
+        Team_ID: "3"\
+    \}\
+]);\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+// Create index on Team_ID\
+db.Players.createIndex(\{ "Team_ID": 1 \});\
+\
+// Create text index on Players collection for search\
+db.Players.createIndex(\{ "Name": "text", "Team_Name": "text" \});\
+}
